@@ -62,8 +62,11 @@ module.exports = {
       },
       {
         test: /\.js$/,
+        include: path.resolve(__dirname, '../src'),
         exclude: /node_modules/,
         use: [
+          'cache-loader', // 缓存资源，提高二次构建的速度
+          // 'thread-loader', // 多进程打包
           'babel-loader'
         ]
       },
