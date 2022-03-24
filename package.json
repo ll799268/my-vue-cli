@@ -6,12 +6,16 @@
   "scripts": {
     "serve": "webpack serve --config ./script/webpack.dev",
     "build": "webpack --config ./script/webpack.prod",
-    "eslint": "eslint ./src"
+    "eslint": "eslint ./src",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "devDependencies": {
     "@babel/core": "^7.17.7",
     "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
     "@vue/babel-preset-jsx": "^1.2.4",
     "babel-loader": "^8.2.3",
     "cache-loader": "^4.1.0",
@@ -24,6 +28,8 @@
     "eslint-plugin-vue": "^8.5.0",
     "eslint-webpack-plugin": "^3.1.1",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
     "mini-css-extract-plugin": "^2.6.0",
     "progress-bar-webpack-plugin": "^2.1.0",
     "sass": "^1.49.9",
